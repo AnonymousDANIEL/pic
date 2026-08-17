@@ -6,7 +6,10 @@
     "node": ">=20.9.0"
   },
   "scripts": {
+    "prepare-project": "node prepare-project.mjs",
+    "predev": "npm run prepare-project",
     "dev": "next dev",
+    "prebuild": "npm run prepare-project",
     "build": "npm run typecheck && next build",
     "start": "next start",
     "lint": "eslint .",

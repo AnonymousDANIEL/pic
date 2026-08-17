@@ -1,0 +1,22 @@
+VIP Poster Studio - GitHub 网页直接上传方法
+
+1. 先解压 vip-poster-studio-GITHUB-DIRECT-UPLOAD.zip。
+2. 打开解压后的 UPLOAD-ALL-FILES 文件夹。
+3. GitHub Repository → Add file → Upload files。
+4. 把 UPLOAD-ALL-FILES 里面的所有文件一次过拖进去。
+5. 点击 Commit changes。
+6. 不要把 ZIP 文件本身上传到 GitHub。
+
+这个版本专门支持 GitHub 把源码全部放在根目录。
+Railway 执行 npm run build 时，prepare-project.mjs 会自动建立：
+
+app/
+components/
+lib/
+types/
+
+Railway 设置：
+Build Command: npm run build
+Start Command: npm start
+
+上传完成后，Railway 会自动重新部署。
